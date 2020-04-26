@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/bootstrap-3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" href="/bootstrap-3.3.7/css/bootstrap-table.min.css">
+    <link rel="stylesheet" href="/css/load.css">
+    <style>
+        .show{
+            padding: 5px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+    </style>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/bootstrap-3.3.7/js/bootstrap.js"></script>
+    <script src="/bootstrap-3.3.7/js/bootstrap-table.min.js"></script>
+    <script src="/bootstrap-3.3.7/js/bootstrap-table-zh-CN.min.js"></script>
+    <script src="/pages/sys.js"></script>
+
+
+</head>
+<body>
+<div class="container">
+    <div id="toolOne">
+        <div class="show alert-success" >集群中正在运行的节点</div>
+    </div>
+    <table id="tableOne"></table>
+    <div id="toolTwo">
+        <div class="show alert-info" >集群中正在运行的任务</div>
+    </div>
+    <table id="tableTwo"></table>
+
+    <div id="toolThree">
+        <div class="show alert-danger" >集群文件系统信息</div>
+    </div>
+
+    <table id="tableThree"></table>
+    <div id="loadDiv" class="animate">
+        <div class="animate-row">
+            <div class="behaviour beha1"></div>
+            <div class="behaviour beha2"></div>
+            <div class="behaviour beha3"></div>
+            <div class="behaviour beha4"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
