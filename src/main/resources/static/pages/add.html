@@ -5,54 +5,47 @@
     <title>Title</title>
     <link rel="stylesheet" href="/bootstrap-3.3.7/css/bootstrap.css">
     <link rel="stylesheet" href="/bootstrap-3.3.7/css/bootstrap-table.min.css">
+    <link rel="stylesheet" href="/ztree/css/metroStyle/metroStyle.css" type="text/css">
     <script src="/js/jquery.min.js"></script>
     <script src="/bootstrap-3.3.7/js/bootstrap.js"></script>
     <script src="/bootstrap-3.3.7/js/bootstrap-table.min.js"></script>
     <script src="/bootstrap-3.3.7/js/bootstrap-table-zh-CN.min.js"></script>
-    <script src="/pages/user.js"></script>
+    <script type="text/javascript" src="/ztree/js/jquery.ztree.all.js"></script>
+    <script src="/pages/add.js"></script>
 </head>
 <body>
 <div class="container">
-    <form class="form-horizontal" style="width: 600px">
-        <div class="form-group">
-            <label for="inputAccount" class="col-sm-2 control-label">账号</label>
-            <div class="col-sm-7">
-                <input type="text" class="form-control" id="inputAccount" disabled>
-            </div>
-
+    <div class="panel panel-primary">
+        <div class="panel-body">
+            <form class="form-horizontal" style="width: 600px">
+                <div class="form-group">
+                    <label for="taskSel" class="col-sm-2 control-label">源服务器</label>
+                    <div class="col-sm-7">
+                        <select id="taskSel" class="form-control" onchange="taskSelChange()">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="treeDemo" class="col-sm-2 control-label">文件夹</label>
+                    <div class="col-sm-7">
+                        <ul id="treeDemo" class="ztree"></ul>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-7">
+                        <button id="btnAdd" type="button" class="btn btn-primary" onclick="addTask()">添加</button>
+                    </div>
+                </div>
+            </form>
         </div>
-        <div class="form-group">
-            <label for="inputName" class="col-sm-2 control-label">姓名</label>
-            <div class="col-sm-7">
-                <input type="text" class="form-control" id="inputName" disabled>
-            </div>
-            <div class="col-sm-3">
-                <button id="btnName1" type="button" class="btn btn-default" >修改</button>
-                <button id="btnName2" type="button" class="btn btn-default">确定</button>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="inputNumber" class="col-sm-2 control-label">手机</label>
-            <div class="col-sm-7">
-                <input type="text" class="form-control" id="inputNumber" disabled>
-            </div>
-            <div class="col-sm-3">
-                <button id="btnNumber1" type="button" class="btn btn-default" >修改</button>
-                <button id="btnNumber2" type="button" class="btn btn-default">确定</button>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="inputPass" class="col-sm-2 control-label">密码</label>
-            <div class="col-sm-7">
-                <input type="text" class="form-control" id="inputPass" disabled>
-            </div>
-            <div class="col-sm-3">
-                <button id="btnPass1" type="button" class="btn btn-default" >修改</button>
-                <button id="btnPass2" type="button" class="btn btn-default">确定</button>
-            </div>
-        </div>
-    </form>
-
+    </div>
 </div>
 </body>
 </html>
