@@ -4,10 +4,12 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.bypx.synthesis.FileUtil;
+import com.bypx.synthesis.bean.TaskInfo;
 import com.bypx.synthesis.bean.User;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -85,5 +87,21 @@ public class UserController {
             result.put("msg","2");
         }
         return result;
+    }
+
+
+    @RequestMapping("test")
+    @ResponseBody
+    public Map test(@RequestBody  List<TaskInfo> list){
+        Map map = new HashMap();
+        map.put("code",0);
+         try {
+             System.out.println(JSON.toJSONString(list));
+             map.put("code",1);
+          }catch (Exception e){
+             e.printStackTrace();
+             map.put("msg",e.getMessage());
+          }
+        return map;
     }
 }

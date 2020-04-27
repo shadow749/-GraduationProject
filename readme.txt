@@ -1,6 +1,7 @@
 1、系统概况 页面 synthesis\src\main\resources\static\pages\sys.html
 
-2、添加任务 页面 synthesis\src\main\resources\static\pages\add.html
+2、添加任务 页面 synthesis\src\main\resources\static\pages\addTabs.html
+   每个任务的详情页面  synthesis\src\main\resources\static\pages\add.html
 
 3、任务详情 页面 synthesis\src\main\resources\static\pages\detail.html
 
