@@ -104,4 +104,18 @@ public class UserController {
           }
         return map;
     }
+    @RequestMapping("teup")
+    @ResponseBody
+    public Map teup(@RequestBody TaskInfo taskInfo){
+        Map map = new HashMap();
+        map.put("code",0);
+         try {
+             System.out.println(JSON.toJSONString(taskInfo));
+             map.put("code",1);
+          }catch (Exception e){
+             e.printStackTrace();
+             map.put("msg",e.getMessage());
+          }
+        return map;
+    }
 }

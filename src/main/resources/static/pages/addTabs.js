@@ -23,17 +23,18 @@ function addTask() {
        }
     }
     if(!flag) return;
-    console.log( arr );
+    // console.log( arr );
 
     $.ajax({
             url: '/test',
+            // url: '/addTask',
             type: 'post',
             contentType: "application/json",
             data:JSON.stringify(arr),
             dataType:"json",
             success: function (data) {
-                if(data.code==1){
-                    alert("成功")
+                if(data.result=="success"){
+                    alert("添加任务成功")
                 }
             }
         });
