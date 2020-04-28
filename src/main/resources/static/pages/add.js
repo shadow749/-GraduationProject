@@ -4,8 +4,7 @@ $(function () {
 var gSelect=""
 function initSelect() {
 $.ajax({
-        url: '/pages/addselect.json',
-        // url: 'http://localhost:8001/getSlaveNodeServices',
+        url: URL_TASK_GET_NODES,
         type: 'get',
         dataType:"json",
         success: function (data) {
@@ -39,9 +38,7 @@ function taskSelChange() {
         },
         async: {
             enable: true,
-            url:"/pages/folder.json",
-            // url:"http://localhost:8001
-            // /list",
+            url:URL_TASK_FOLDER,
             type:"get",
             autoParam:["fileUrl"],
             otherParam:{"sourceUrl":gUrl}
@@ -180,8 +177,7 @@ function targetTreeSet(source,url) {
         },
         async: {
             enable: true,
-            url:"/pages/folder.json",
-            // url:"http://localhost:8001/list",
+            url:URL_TASK_FOLDER,
             type:"get",
             autoParam:["fileUrl"],
             otherParam:{"sourceUrl":sUrl}

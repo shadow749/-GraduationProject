@@ -26,8 +26,7 @@ function addTask() {
     // console.log( arr );
 
     $.ajax({
-            url: '/test',
-            // url: '/addTask',
+            url: URL_TASK_SUB,
             type: 'post',
             contentType: "application/json",
             data:JSON.stringify(arr),

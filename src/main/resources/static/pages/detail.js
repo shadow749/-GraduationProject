@@ -14,8 +14,7 @@ let gdata;
 //正在运行的节点
 function tableInit() {
     $('#tableOne').bootstrapTable({
-        url: '/pages/detail.json', // 请求后台的URL（*）
-        // url: 'http://localhost:8001/getAllTasks', // 请求后台的URL（*）
+        url: URL_SYS2, // 请求后台的URL（*）
         method: 'get', // 请求方式（*）
         contentType: "application/x-www-form-urlencoded",//post 必须制定类型，否则不能正常传值
         toolbar: '#toolOne', // 工具按钮用哪个容器
@@ -91,8 +90,7 @@ function tableInit() {
 
 function pauseTask(id) {
     $.ajax({
-        url: '/pages/detail.json',
-        // url: 'http://localhost:8001/pauseTask',
+        url: URL_TASK_PAUSE,
         type: 'get',
          data:{taskId:id},
         dataType:"json",
@@ -107,8 +105,7 @@ function pauseTask(id) {
 }
 function startTask(id) {
     $.ajax({
-        url: '/pages/detail.json',
-        // url: 'http://localhost:8001/startTask',
+        url: URL_TASK_START,
         type: 'get',
          data:{taskId:id},
         dataType:"json",
@@ -125,8 +122,7 @@ function startTask(id) {
 
 function deleTask(id) {
     $.ajax({
-        url: '/pages/detail.json',
-        // url: 'http://localhost:8001/deleteTask',
+        url: URL_TASK_DELE,
         type: 'get',
         data:{taskId:id},
         dataType:"json",
@@ -147,8 +143,7 @@ function deleTask(id) {
 var gSelect=""
 function initSelect() {
     $.ajax({
-        url: '/pages/addselect.json',
-        // url: 'http://localhost:8001/getSlaveNodeServices',
+        url: URL_TASK_GET_NODES,
         type: 'get',
         dataType:"json",
         success: function (data) {
@@ -161,8 +156,7 @@ function initSelect() {
 let oldArr=[]
 function getInfo(id) {
     $.ajax({
-        url: '/pages/detail2.json',
-        // url: 'http://localhost:8001/getTaskDetails',
+        url: URL_TASK_DETAIL_LIST,
         type: 'get',
         data:{taskId:id},
         dataType:"json",
@@ -295,8 +289,7 @@ function targetTreeSet(source,url) {
         },
         async: {
             enable: true,
-            url:"/pages/folder.json",
-            // url:"http://localhost:8001/list",
+            url:URL_TASK_FOLDER,
             type:"get",
             autoParam:["fileUrl"],
             otherParam:{"sourceUrl":sUrl}
@@ -366,8 +359,7 @@ function updateTask() {
         targetList:tarArr
     }
     $.ajax({
-        url: '/teup',
-        // url: 'http://localhost:8001/modifyTask',
+        url: URL_TASK_MODIFY,
         type: 'post',
         contentType: "application/json",
         data:JSON.stringify(data),
@@ -382,8 +374,7 @@ function updateTask() {
 
 function taskMsg(id) {
     $.ajax({
-        url: '/pages/detailmsg.json',
-        // url: 'http://localhost:8001/getTaskInformation',
+        url: URL_TASK_DETAIL,
         type: 'get',
         data:{taskId:id},
         dataType:"json",

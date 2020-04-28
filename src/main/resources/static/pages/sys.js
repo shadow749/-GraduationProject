@@ -12,8 +12,7 @@ $(function () {
 //正在运行的节点
 function tableInit() {
     $('#tableOne').bootstrapTable({
-        url: '/pages/sys1.json', // 请求后台的URL（*）
-        // url: 'http://localhost:8001/getEurekaServices', // 请求后台的URL（*）
+        url: URL_SYS1, // 请求后台的URL（*）
         method: 'get', // 请求方式（*）
         contentType: "application/x-www-form-urlencoded",//post 必须制定类型，否则不能正常传值
         toolbar: '#toolOne', // 工具按钮用哪个容器
@@ -49,8 +48,7 @@ function tableInit() {
 //正在运行的任务
 function tableInit2() {
     $('#tableTwo').bootstrapTable({
-        url: '/pages/sys2.json', // 请求后台的URL（*）
-        // url: 'http://localhost:8001/getAllTasks', // 请求后台的URL（*）
+        url: URL_SYS2, // 请求后台的URL（*）
         method: 'get', // 请求方式（*）
         contentType: "application/x-www-form-urlencoded",//post 必须制定类型，否则不能正常传值
         toolbar: '#toolTwo', // 工具按钮用哪个容器
@@ -110,8 +108,7 @@ function tableInit2() {
 
 function initThree() {
     $.ajax({
-            url: '/pages/sys3.json',
-            // url: 'http://localhost:8001/getLastTenInfo',
+            url: URL_SYS3,
             type: 'get',
             dataType:"json",
             success: function (data) {
