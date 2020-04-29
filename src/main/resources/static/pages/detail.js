@@ -156,7 +156,7 @@ function initSelect() {
 let oldArr=[]
 function getInfo(id) {
     $.ajax({
-        url: URL_TASK_DETAIL_LIST,
+        url: URL_TASK_DETAIL,
         type: 'get',
         data:{taskId:id},
         dataType:"json",
@@ -374,7 +374,7 @@ function updateTask() {
 
 function taskMsg(id) {
     $.ajax({
-        url: URL_TASK_DETAIL,
+        url: URL_TASK_DETAIL_MSG,
         type: 'get',
         data:{taskId:id},
         dataType:"json",

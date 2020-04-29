@@ -156,8 +156,8 @@ $(function () {
 function login() {
     var loginName=$("#loginName").val();
     var loginPass=$("#loginPass").val();
-	loginName="admin";
-	loginPass="123456"
+	// loginName="admin";
+	// loginPass="123456"
     if(!loginName){
         $("#loginName").focus();
         return;

@@ -11,8 +11,7 @@ let gdata;
 //正在运行的节点
 function tableInit() {
     $('#tableOne').bootstrapTable({
-        url: '/pages/detail.json', // 请求后台的URL（*）
-        // url: 'http://localhost:8001/getAllTasks', // 请求后台的URL（*）
+        url: URL_TASK_HIS, // 请求后台的URL（*）
         method: 'get', // 请求方式（*）
         contentType: "application/x-www-form-urlencoded",//post 必须制定类型，否则不能正常传值
         toolbar: '#toolOne', // 工具按钮用哪个容器
@@ -83,8 +82,7 @@ function tableInit() {
 let oldArr=[]
 function getInfo(id) {
     $.ajax({
-        url: '/pages/detail2.json',
-        // url: 'http://localhost:8001/getTaskDetails',
+        url: URL_TASK_HIS_DETAIL,
         type: 'get',
         data:{taskId:id},
         dataType:"json",
@@ -132,8 +130,7 @@ function getInfo(id) {
 
 function taskMsg(id) {
     $.ajax({
-        url: '/pages/detailmsg.json',
-        // url: 'http://localhost:8001/getTaskInformation',
+        url: URL_TASK_DETAIL_MSG,
         type: 'get',
         data:{taskId:id},
         dataType:"json",
